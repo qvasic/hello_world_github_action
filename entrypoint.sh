@@ -1,6 +1,10 @@
 #!/bin/sh -l
 
 echo "Hello ${1}"
-time=$(date)
-echo "time=${time}" >> $GITHUB_OUTPUT
+
+pwd
 ls
+git --version
+ls /github/workspace
+cd /github/workspace
+git diff HEAD~1

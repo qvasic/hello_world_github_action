@@ -6,11 +6,20 @@ inputs:
     description: 'who to greet'
     required: true
     default: 'world'
-outputs:
-  time:
-    description: 'time we greeted you'
+  # repository:
+  #   description: 'what repo to checkout'
+  #   required: true
+  # ref:
+  #   description: 'what ref to checkout'
+  #   required: true
+  # token:
+  #   description: 'what token to use when checking out'
+  #   required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
+    # - ${{ inputs.repository }}
+    # - ${{ inputs.ref }}
+    # - ${{ inputs.token }}
