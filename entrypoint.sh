@@ -1,10 +1,7 @@
 #!/bin/sh -l
 
-echo "Hello ${1}"
+export PATH=$PATH:/style_check
+export PYTHONPATH=/style_check
 
-pwd
-ls
-git --version
-ls /github/workspace
 cd /github/workspace
-git diff HEAD~1
+python3 /style_check/check_commit_style.py ${1}

@@ -1,25 +1,11 @@
 # action.yml
-name: 'Hello World'
-description: 'greet somebody'
+name: 'Style check'
+description: 'Checks code style and posts comments with suggestions.'
 inputs:
-  who-to-greet:
-    description: 'who to greet'
-    required: true
-    default: 'world'
-  # repository:
-  #   description: 'what repo to checkout'
-  #   required: true
-  # ref:
-  #   description: 'what ref to checkout'
-  #   required: true
-  # token:
-  #   description: 'what token to use when checking out'
-  #   required: true
+  github_token:
+    description: 'GitHub token that will be used to post style suggestion comments.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
-    # - ${{ inputs.repository }}
-    # - ${{ inputs.ref }}
-    # - ${{ inputs.token }}
+    - ${{ inputs.github_token }}

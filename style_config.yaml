@@ -1,0 +1,11 @@
+style_config:
+  c-like:
+    suffixes:
+    - .c
+    - .h
+    - .cpp
+    - .hpp
+    - .hxx
+    styler_command:  # styler command and its arguments
+    - clang-format
+    - -style=Mozilla
