@@ -1,4 +1,5 @@
 FROM python:3.8
+RUN python3 -m pip install pyyml
 
 WORKDIR /style_police
 COPY entrypoint.sh /style_police/entrypoint.sh
